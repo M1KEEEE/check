@@ -1,17 +1,16 @@
-"""
-480 x 360
+import string
 
-размер - количество
-12 - 50
-8 - 100
-"""
-
-def show_squares(width, height):
-    square = width * height
-    for i in range(2, min(width, height)):
-        if width % i == 0 and height % i == 0:
-            print(i, square / (i * i))
+alphabet = string.ascii_lowercase + string.ascii_uppercase
+alphabet += "0123456789_-"
 
 
-
-show_squares(480, 360)
+def encode(text: str) -> str:
+    result = ""
+    for i in text:
+        if len(str(alphabet.index(i))) == 1:
+            result = result + "0" + str(alphabet.index(i))
+        else:
+            result += str(alphabet.index(i))
+    return result
+            
+print(encode("vasya"))
