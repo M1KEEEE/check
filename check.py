@@ -13,4 +13,10 @@ def encode(text: str) -> str:
             result += str(alphabet.index(i))
     return result
             
-print(encode("vasya"))
+def decode(text: str) -> str:
+    """
+    пробежать по 2 
+    если первй 0, то он откидывается
+    ищем индекс в алфавите
+    возвращаем по этому индексу из алфавита
+    """    
