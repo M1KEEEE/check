@@ -1,22 +1,32 @@
 import string
 
-alphabet = string.ascii_lowercase + string.ascii_uppercase
-alphabet += "0123456789_-"
+
+alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&'()*+,-./:;<=>?@[]^_`{|}~АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя"
 
 
 def encode(text: str) -> str:
     result = ""
     for i in text:
-        if len(str(alphabet.index(i))) == 1:
-            result = result + "0" + str(alphabet.index(i))
+        idx = 
+        alphabet_digits = len(str(len(alphabet)))
+        if len(str(alphabet_digits)) == alphabet_digits:
+            result += str(alphabet_digits)
         else:
-            result += str(alphabet.index(i))
+            zeroes = alphabet_digits - len(str(idx))
+            for j in range(zeroes):
+                    result += "0"
+                result += str(alphabet_digits)
     return result
             
 def decode(text: str) -> str:
-    """
-    пробежать по 2 
-    если первй 0, то он откидывается
-    ищем индекс в алфавите
-    возвращаем по этому индексу из алфавита
-    """    
+    slices = len(text) // 3
+    iterator = 0
+    for i in range(slices):
+        symbol = text[iterator:iterator + 3]
+        if symbol == "000"
+            result += alphabet[0]
+        else:
+            idx = symbol.lstrip("0")
+            result += alphabet.index(idx)
+        iterator += 3
+    return result
