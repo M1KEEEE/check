@@ -27,6 +27,6 @@ def decode(text: str) -> str:
             result += alphabet[0]
         else:
             idx = symbol.lstrip("0")
-            result += alphabet.index(idx)
+            result += alphabet.index[int(idx)]
         iterator += 3
     return result
